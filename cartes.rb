@@ -1,12 +1,12 @@
 class Cartes
-
   def jeu_de_cartes
-    familles = ["trèfle", "pique", "carreau", "coeur"]
+    couleurs = ["trèfle", "pique", "carreau", "coeur"]
     valeurs = [*2..14]
     cartes = []
 
-    familles.each do |famille|
+    couleurs.each do |couleur|
       valeurs.each do |valeur|
+
         if valeur == 11
           valeur = 'valet'
         elsif valeur == 12
@@ -16,13 +16,11 @@ class Cartes
         elsif valeur == 14
           valeur = 'as'
         end
-        carte = [valeur, famille]
+        
+        carte = [valeur, couleur]
         cartes << carte
       end
-      print  "---------------- #{cartes} ---------------"
-
     end
+    print  "---------------- #{cartes} ---------------"
   end
-
-
 end
